@@ -1,0 +1,307 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: "Open Sans", Helvetica Neue, Sans-serif;
+  }
+/* header */
+.name{
+  width: 100%;
+  min-height: 8%;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 5%;
+  background-color: rgba(0,0,0,0.1);
+  color:orange;
+  z-index: 100;
+  position: absolute;
+  font-size: 2vw;
+}
+/* navigation */
+.navigation{
+  width: 100%;
+  height: 10%;
+  z-index: 200;
+  top:100%;
+  color:black;
+  border-bottom: 1px solid black;
+  font-size: 1.5vw;
+}
+.navigation > ul{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 100%;
+  padding: 0 12.5%;
+}
+.navigation > ul > li{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+  width: 100%;
+  height: 100%;
+}
+.navigation > ul > li:hover{
+  cursor: pointer;
+}
+.navigation a{
+  text-decoration: none;
+  color:inherit;
+
+}
+/* picture and text on main page */
+.welcome_picture{
+  width: 100%;
+  height: 100%;
+  background-image: url('../photo/main-photo.jpg');
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  color: orange;
+  letter-spacing: 3px;
+}
+.text{
+  z-index: 100;
+  width: 96%;
+  margin-left: 2%;
+  text-shadow:2px 2px 0 black;
+}
+.picture_text{
+  font-size:4vw;
+  padding-bottom: 1.5%;
+}
+.text > h2{
+  font-size: 2vw;
+}
+.black_courtine{
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2);
+}
+/*gallery */
+.gallery{
+  width: 100%;
+  height: 80%;
+  border-bottom: 1px solid black;
+  display: none;
+}
+/*offer section */
+.offer{
+  width: 100%;
+  height: 90%;
+  display: grid;
+  grid-template-areas: "main_title main_title main_title"
+                        "main_description main_description main_description";
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-rows: 10% 30% 60%;
+  text-align: center;
+  padding: 0 3%;
+}
+.offer_main_title{
+  grid-area: main_title;
+  font-size: 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack:end;
+      -ms-flex-pack:end;
+          justify-content:flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.offer_main_description{
+  grid-area: main_description;
+  padding-top: 3%;
+  line-height:6vh;
+  font-size: 1.5vw;
+}
+.offer_item_title{
+  min-height: 13%;
+  font-size: 1.8vw;
+}
+.offer_item_description{
+  height: 30%;
+  font-size: 1.5vw;
+  line-height: 4vh;
+}
+/*contact section */
+.contact{
+  height: 50%;
+  width: 100%;
+  z-index: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  border-top: 1px solid black;
+}
+.tail{
+  width: 33.3%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.icon{
+  font-size: 5vw;
+  min-height: 30%;
+}
+.description{
+  min-height: 25%;
+  line-height: 4vh;
+  font-size: 1.5vw;
+}
+.description > a{
+  color:black;
+  text-decoration: none;
+  cursor: default;
+}
+.description > a:hover{
+  cursor: default;
+}
+
+/* other classes */
+.flex_center_vertical{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/*media queries */
+
+@media only screen and (max-width:800px)
+{
+  .name{
+    text-align: center;
+    font-size: 3vh;
+    padding-left: 0;
+  }
+  .navigation > ul{
+    width: 100%;
+    padding: 0 5%;
+    font-size: 2.5vh;
+  }
+  .picture_text{
+    font-size: 5vh;
+  }
+  .text > h2{
+    font-size: 3vh;
+  }
+.offer{
+  height: 100%;
+  grid-template-areas: "main_title"
+                       "main_description"
+                       "item1 "
+                       "item3 "
+                       "item2";
+  grid-template-columns:100%;
+  grid-template-rows: 5% 30% 20% 20% 25%;
+}
+.offer_main_title{
+    font-size: 3vh;
+}
+.offer_main_description{
+  font-size: 2vh;
+  line-height: 3.6vh;
+}
+.offer_item:nth-child(even){
+  grid-area: item2;
+}
+.offer_item_title{
+    font-size: 2.5vh;
+    margin-top: 5%;
+    min-height: 8%;
+}
+.offer_item_description{
+  font-size: 1.6vh;
+}
+.contact{
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.tail{
+  -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+  width: 100%;
+}
+.icon{
+  min-height: 40%;
+  font-size: 7vh;
+}
+.description{
+  min-height: 50%;
+  width: 100%;
+  font-size: 2vh;
+}
+.description >a:hover{
+  cursor: pointer;
+}
+}
+@media only screen and (max-width:450px){
+  .picture_text{
+    font-size: 4vh;
+  }
+  .text >h2{
+    padding-top: 3%;
+    font-size: 3vh;
+  }
+}
