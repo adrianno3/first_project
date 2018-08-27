@@ -120,38 +120,53 @@ font-family: 'Alegreya Sans', sans-serif;  }
   border-bottom: 1px solid black;
   display: none;
 }
-/*offer section */
 .offer{
+  display: flex;
   width: 100%;
-  min-height: 75%;
-  display: grid;
-  grid-template-areas: "main_title main_title main_title"
-                        "main_description main_description main_description";
-  grid-template-columns: 33.3% 33.3% 33.3%;
-  grid-template-rows: 10% 30% 60%;
-  text-align: center;
-  padding: 0 3%;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: center;
+  font-size: 2vw;
 }
 .offer_main_title{
-  grid-area: main_title;
+  width: 100%;
+  min-height: 7%;
+  text-align: center;
   font-size: 2vw;
-  align-self: end;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
-
 .offer_main_description{
-  grid-area: main_description;
+  min-height: 20%;
+  text-align: center;
   line-height:6vh;
   font-size: 1.5vw;
+  padding: 0 2%;
+}
+.offer_item{
+  width: 30%;
+  min-height: 40%;
+  text-align:center;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .offer_item_title{
-  font-size: 1.8vw;
+    font-size: 1.8vw;
 }
 .offer_item_description{
+  padding-top: 2%;
   font-size: 1.5vw;
   line-height: 4vh;
-  padding-top: 5%;
 }
+
+
+
+
+
 /*contact section */
 .contact{
   height: 50%;
@@ -231,16 +246,11 @@ font-family: 'Alegreya Sans', sans-serif;  }
   }
 
 .offer{
-  grid-template-areas: "main_title"
-                       "main_description"
-                       "item1 "
-                       "item3 "
-                       "item2";
-  grid-template-columns:100%;
-  grid-template-rows: 8% 27% 20% 20% 25%;
-  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
 }
-
 .offer_main_title{
     font-size: 3vh;
 }
@@ -248,15 +258,16 @@ font-family: 'Alegreya Sans', sans-serif;  }
   font-size: 2vh;
   line-height:4vh;
 }
-.offer_item:nth-child(even){
-  grid-area: item2;
+.offer_item{
+  width: 100%;
+  min-height: 20%;
 }
 .offer_item_title{
     font-size: 2.5vh;
 }
 .offer_item_description{
-  font-size: 1.6vh;
-  padding-top: 0%;
+  font-size: 2vh;
+  padding: 0 2%;
 }
 
 .contact{
@@ -287,11 +298,6 @@ font-family: 'Alegreya Sans', sans-serif;  }
 .description >a:hover{
   cursor: pointer;
 }
-}
-@media only screen and (max-width:580px){
-  .offer{
-    grid-template-rows: 5% 28% 20% 20% 25%;
-  }
 }
 @media only screen and (max-width:490px){
   .picture_text{
