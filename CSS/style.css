@@ -225,7 +225,7 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 45vh;
+  min-height: 45vh;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
@@ -269,7 +269,7 @@
 
 .icon {
   font-size: 5vw;
-  height: 30%;
+  min-height: 35%;
 }
 
 .description_tail {
@@ -355,12 +355,12 @@
   }
 
   .contact {
-    height: 90vh;
+    min-height: 70vh;
   }
 
   .tail {
     width: 100%;
-    height: 30%;
+    min-height: 30%;
   }
 
   .icon {
@@ -369,7 +369,7 @@
 
   .description_tail {
     font-size: 2vh;
-    height: 60%;
+    min-height: 60%;
   }
 
   .description_tail>a:hover {
